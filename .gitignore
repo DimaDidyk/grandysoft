@@ -1,27 +1,5 @@
-# ignore everything in the root except the "wp-content" directory.
-/*
-!wp-content/
-
-# ignore everything in the "wp-content" directory, except:
-# mu-plugins, plugins, and themes directories
-wp-content/*
-!wp-content/mu-plugins/
-!wp-content/plugins/
-!wp-content/themes/
-
-# ignore all mu-plugins, plugins, and themes
-# unless explicitly whitelisted at the end of this file
-wp-content/themes/*
-
-# ignore index.php in plugins folder
-wp-content/plugins/index.php
-
-# ignore all files starting with . or ~
-.*
-~*
-
-# ignore node dependency directories (used by grunt)
- node_modules/
+node_modules/
+vendor/
 
 
 # ignore OS generated files
@@ -56,17 +34,3 @@ Thumbs.db
 *.rar
 *.tar
 *.zip
-
-# -------------------------
-# BEGIN Whitelisted Files
-# -------------------------
-
-# track these files, if they exist
-!.gitignore
-!.editorconfig
-!README.md
-!CHANGELOG.md
-!composer.json
-
-# track these themes
-!wp-content/themes/grandysoft/
