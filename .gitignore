@@ -1,6 +1,6 @@
 node_modules/
 vendor/
-
+.idea/
 
 # ignore OS generated files
 ehthumbs.db
