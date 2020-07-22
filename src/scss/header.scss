@@ -9,7 +9,10 @@
   right: 0;
   width: 100%;
   z-index: 10;
-
+  .header-content{
+    display: flex;
+    justify-content: space-between;
+  }
 }
 body.admin-bar #masthead{
   top: 30px;
@@ -21,35 +24,51 @@ body.admin-bar #masthead{
   justify-content: space-between;
   padding: 20px 0;
 }
+
 // --------- LOGO
 .site-title{
-  color: $textColor;
-  font-size: 20px;
-  text-transform: uppercase;
-  border: 2px solid;
-  padding: 0px 4px;
+  width: 200px;
   a{
-    color: white;
-    //animation: logo-weight 2.5s alternate infinite;
-    letter-spacing: 1px;
-  }
-}
-// --------- MENU
-.site-menu{
-  display: flex;
-  flex-wrap: wrap;
-  li{
-    list-style: none;
-  }
-  a{
-    padding: 15px 10px;
-    color: white;
+    color: $textColor;
+    font-size: 20px;
     text-transform: uppercase;
-    font-weight: bold;
+    border: 2px solid;
+    padding: 0px 4px;
     letter-spacing: 1px;
-    font-size: 14px;
-  }
-  a:hover{
-    color: $textColorHover;
   }
 }
+
+// --------- MENU
+.menu-header-menu-container{
+  display: flex;
+  align-items: center;
+  .site-menu{
+    display: flex;
+    flex-wrap: wrap;
+    li{
+      list-style: none;
+    }
+    a{
+      padding: 4px 10px;
+      color: white;
+      text-transform: uppercase;
+      font-weight: bold;
+      letter-spacing: 1px;
+      font-size: 14px;
+    }
+    a:hover{
+      color: $textColorHover;
+    }
+  }
+}
+// --------- ICONS
+.header-icons{
+  width: 200px;
+  text-align: right;
+  color: $textColor;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: flex-end;
+}
+

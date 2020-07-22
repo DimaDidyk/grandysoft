@@ -19,7 +19,7 @@ get_header();
             <img src="<?php echo get_the_post_thumbnail_url( get_the_ID(), '1200x1200' ); ?>" alt="bg" class="background">
 
             <div class="container">
-                <div class="text-content">
+                <div class="text-content"> 
                     <?php echo get_post()->post_content; ?>
                 </div>
             </div>

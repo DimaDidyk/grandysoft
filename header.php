@@ -47,6 +47,10 @@
                     'depth'           => 0,
                     'walker'          => '',
                 ] ); ?>
+
+                <div class="header-icons">
+                    ICONS
+                </div>
             </div>
         </div>
 
