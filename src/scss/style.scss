@@ -1,0 +1,45 @@
+// Colors
+$themeColor: rgb(85,83,84);
+$color2: rgba(85,83,84, .6);
+$textColor: #fff;
+$textColorHover: #b6a392;
+$mainBgColor: #fcfcfc;
+
+// imports
+@import 'typography';
+@import 'header';
+@import 'footer';
+
+// -------------------------------
+// Grid
+// -------------------------------
+.container{
+  display: block;
+  width: 1240px;
+  margin: 0 auto;
+  max-width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+  box-sizing: border-box;
+}
+.container.padding-0{
+  padding: 0;
+}
+
+// -------------------------------
+// Front page
+// -------------------------------
+// section - banner
+section.banner{
+  min-height: 600px;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  .text-content{
+    width: 700px;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+}
+
+

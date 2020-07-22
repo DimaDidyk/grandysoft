@@ -1,0 +1,55 @@
+// -------------------------------
+// HEADER
+// -------------------------------
+#masthead{
+  background: $color2;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 10;
+
+}
+body.admin-bar #masthead{
+  top: 30px;
+}
+
+.header-content{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+// --------- LOGO
+.site-title{
+  color: $textColor;
+  font-size: 20px;
+  text-transform: uppercase;
+  border: 2px solid;
+  padding: 0px 4px;
+  a{
+    color: white;
+    //animation: logo-weight 2.5s alternate infinite;
+    letter-spacing: 1px;
+  }
+}
+// --------- MENU
+.site-menu{
+  display: flex;
+  flex-wrap: wrap;
+  li{
+    list-style: none;
+  }
+  a{
+    padding: 15px 10px;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 14px;
+  }
+  a:hover{
+    color: $textColorHover;
+  }
+}
