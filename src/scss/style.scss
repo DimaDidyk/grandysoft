@@ -1,3 +1,8 @@
+html, body{
+  padding: 0;
+  margin: 0;
+}
+
 // Colors
 $themeColor: rgb(85,83,84);
 $color2: rgba(85,83,84, .6);
@@ -9,6 +14,8 @@ $mainBgColor: #fcfcfc;
 @import 'typography';
 @import 'header';
 @import 'footer';
+
+
 
 // -------------------------------
 // Grid
@@ -29,8 +36,8 @@ $mainBgColor: #fcfcfc;
 // -------------------------------
 // Front page
 // -------------------------------
-// section - banner
-section.banner{
+// section - OVERVIEW
+section#home-overview{
   min-height: 600px;
   display: flex;
   text-align: center;
@@ -39,5 +46,39 @@ section.banner{
     width: 700px;
     max-width: 100%;
     margin: 0 auto;
+    h3{
+      font-weight: 300;
+      font-size: 25px;
+    }
+  }
+  img.background{
+    object-position: bottom;
+  }
+}
+
+// section - SERVICES
+#home-services{
+  padding-bottom: 50px;
+}
+.services-wrap{
+  display: flex;
+  flex-wrap: wrap;
+  .service-item{
+    width: 33.33%;
+    text-align: center;
+    padding: 20px 15px;
+    box-sizing: border-box;
+  }
+  .service-icon{
+    svg{
+      width: 100px;
+      height: 100px;
+    }
+  }
+  .service-title{
+    font-size: 20px;
+    margin-top: 12px;
+    width: 300px;
+    display: inline-block;
   }
 }
