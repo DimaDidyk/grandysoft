@@ -31,7 +31,7 @@ get_header();
             </div>
         </section>
 
-        <section id="home-services" class="">
+        <section id="home-services" class="bg-white">
             <div class="container">
                 <div class="text-content">
                     <div class="section-title">Our Services</div>
@@ -73,6 +73,26 @@ get_header();
                             <div class="service-title">Automatization</div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about-us" class="">
+            <div class="container">
+                <div class="section-title">About us</div>
+                <div class="text-content align-center">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur fugit incidunt laborum, maxime mollitia nobis officiis possimus quidem quo ratione.
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur fugit incidunt laborum, maxime mollitia nobis officiis possimus quidem quo ratione.
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur fugit incidunt laborum, maxime mollitia nobis officiis possimus quidem quo ratione.
+                </div>
+            </div>
+        </section>
+
+        <section id="team" class="bg-white">
+            <div class="container">
+                <div class="section-title">Team</div>
+                <div class="text-content align-center">
+
                 </div>
             </div>
         </section>

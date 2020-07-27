@@ -1,14 +1,23 @@
+// Colors
+$themeColor: rgb(85,83,84);
+$color2: rgba(85,83,84, .6);
+$color3: #a06f3a;
+$textColor: #fff;
+$textColorHover: rgb(226, 176, 122);
+$mainBgColor: #eeeeee;
+
 html, body{
   padding: 0;
   margin: 0;
 }
+body{
+  background: $mainBgColor;
+}
+body:not(.home){
+  padding-top: 62px;
+}
 
-// Colors
-$themeColor: rgb(85,83,84);
-$color2: rgba(85,83,84, .6);
-$textColor: #fff;
-$textColorHover: #b6a392;
-$mainBgColor: #fcfcfc;
+
 
 // imports
 @import 'typography';
@@ -25,8 +34,8 @@ $mainBgColor: #fcfcfc;
   width: 1240px;
   margin: 0 auto;
   max-width: 100%;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 30px;
+  padding-right: 30px;
   box-sizing: border-box;
 }
 .container.padding-0{
@@ -75,32 +84,57 @@ section#home-overview{
   }
 }
 
-  // section - SERVICES
+// section - SERVICES
 #home-services{
-  padding-bottom: 50px;
   .services-wrap{
     display: flex;
     flex-wrap: wrap;
+    padding-bottom: 40px;
     .service-item{
       width: 33.33%;
       text-align: center;
       padding: 20px 15px;
       box-sizing: border-box;
+      opacity: .8;
+      transition: all .3s;
+      cursor: default;
     }
     .service-icon{
+      fill: #a06f3a;
+      transition: all .3s;
       svg{
         width: 100px;
         height: 100px;
+        transition: all .3s;
       }
     }
+    .service-item:hover{
+      opacity: 1;
+    }
     .service-item:hover .service-icon svg{
-
+      transform: scale(1.1);
+      fill: #000;
     }
     .service-title{
+      transition: all .3s;
       font-size: 20px;
       margin-top: 12px;
+      font-weight: 300;
       width: 300px;
       display: inline-block;
     }
+  }
+}
+
+// ABOUT US
+section#about-us{
+  padding-bottom: 80px;
+  .text-content{
+    width: 800px;
+    max-width: 100%;
+    font-weight: 300;
+    margin: 0 auto;
+    font-size: 18px;
+    line-height: 1.8;
   }
 }
