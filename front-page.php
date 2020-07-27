@@ -19,16 +19,17 @@ get_header();
             <img src="<?php echo get_the_post_thumbnail_url( get_the_ID(), '1200x1200' ); ?>" alt="bg" class="background">
             <div class="container">
                 <div class="text-content">
-<!--                    <div class="section-title">Overview</div>-->
+                    <!-- <div class="section-title">Overview</div>-->
                     <h3>Hello! We are young team of developers</h3>
-                    <h3>We are oriented on maximal clearness and client's keenness into the process of project development.</h3>
-                    <h3>We are interested in our clients' satisfaction via fast releases of viable products without quality loss.</h3>
-                    <h3>We write clean and well-commented code, which in result lead us to great scalability and simplifies development in the future.</h3>
+                    <div class="animate-area">
+                        <h3 class="animate-text">We are oriented on <span>maximal clearness</span> and <span>client's keenness</span> into the process of project development.</h3>
+                        <h3 class="animate-text">We are interested in our <span>clients' satisfaction</span> via <span>fast releases</span> of viable products without quality loss.</h3>
+                        <h3 class="animate-text">We write clean and well-commented code, which in result lead us to great scalability and <span>simplifies development</span> in the future.</h3>
+                    </div>
                     <?php //echo get_post()->post_content; ?>
                 </div>
             </div>
         </section>
-
 
         <section id="home-services" class="">
             <div class="container">

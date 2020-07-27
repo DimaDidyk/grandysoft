@@ -49,6 +49,11 @@ section#home-overview{
     h3{
       font-weight: 300;
       font-size: 25px;
+      span{
+        background: $textColor;
+        color: #929190; // current bg color
+        padding: 0 4px;
+      }
     }
   }
   img.background{
@@ -56,29 +61,46 @@ section#home-overview{
   }
 }
 
-// section - SERVICES
+#home-overview {
+  .animate-area{
+    position: relative;
+    height: 50px;
+  }
+  h3.animate-text {
+    opacity: 0;
+    position: absolute;
+  }
+  h3.animate-text:nth-child(1) {
+    opacity: 1;
+  }
+}
+
+  // section - SERVICES
 #home-services{
   padding-bottom: 50px;
-}
-.services-wrap{
-  display: flex;
-  flex-wrap: wrap;
-  .service-item{
-    width: 33.33%;
-    text-align: center;
-    padding: 20px 15px;
-    box-sizing: border-box;
-  }
-  .service-icon{
-    svg{
-      width: 100px;
-      height: 100px;
+  .services-wrap{
+    display: flex;
+    flex-wrap: wrap;
+    .service-item{
+      width: 33.33%;
+      text-align: center;
+      padding: 20px 15px;
+      box-sizing: border-box;
     }
-  }
-  .service-title{
-    font-size: 20px;
-    margin-top: 12px;
-    width: 300px;
-    display: inline-block;
+    .service-icon{
+      svg{
+        width: 100px;
+        height: 100px;
+      }
+    }
+    .service-item:hover .service-icon svg{
+
+    }
+    .service-title{
+      font-size: 20px;
+      margin-top: 12px;
+      width: 300px;
+      display: inline-block;
+    }
   }
 }

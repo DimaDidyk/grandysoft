@@ -49,7 +49,9 @@
                 ] ); ?>
 
                 <div class="header-icons">
-                    ICONS
+                    <a href="#"><?php require get_template_directory(). '/src/icons/instagram.svg.php'; ?></a>
+                    <a href="#"><?php require get_template_directory(). '/src/icons/facebook.svg.php'; ?></a>
+                    <a href="#"><?php require get_template_directory(). '/src/icons/linkedin.svg.php'; ?></a>
                 </div>
             </div>
         </div>
