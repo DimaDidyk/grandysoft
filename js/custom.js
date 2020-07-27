@@ -1,5 +1,16 @@
 jQuery(document).ready(function ($) {
 
+    // header scrolling class trigger
+    $(window).scroll(function() {
+        let scroll = $(window).scrollTop();
+        if (scroll >= 200) {
+            $('#masthead').addClass('scrolling');
+        } else {
+            $('#masthead').removeClass('scrolling');
+        }
+    });
+
+    // OVERVIEW animation for text
     let overviewElements = $('#home-overview .animate-text');
     let first = overviewElements.first();
     let currentElement = first;

@@ -34,8 +34,8 @@ get_header();
         <section id="home-services" class="bg-white">
             <div class="container">
                 <div class="text-content">
-                    <div class="section-title">Our Services</div>
-                    <div class="services-wrap">
+                    <div class="section-title text-color-2">Our Services</div>
+                    <div class="services-wrap text-color-2">
                         <div class="service-item">
                             <div class="service-icon">
                                 <?php require get_template_directory(). '/src/icons/saas.svg.php'; ?>
@@ -79,8 +79,8 @@ get_header();
 
         <section id="about-us" class="">
             <div class="container">
-                <div class="section-title">About us</div>
-                <div class="text-content align-center">
+                <div class="section-title text-color-2">About us</div>
+                <div class="text-content align-center text-color-2">
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur fugit incidunt laborum, maxime mollitia nobis officiis possimus quidem quo ratione.
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur fugit incidunt laborum, maxime mollitia nobis officiis possimus quidem quo ratione.
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur fugit incidunt laborum, maxime mollitia nobis officiis possimus quidem quo ratione.
@@ -90,7 +90,25 @@ get_header();
 
         <section id="team" class="bg-white">
             <div class="container">
-                <div class="section-title">Team</div>
+                <div class="section-title text-color-2">Team</div>
+
+                <div class="text-content align-center">
+                </div>
+            </div>
+        </section>
+
+        <section id="portfolio" class="">
+            <div class="container">
+                <div class="section-title text-color-2">Portfolio</div>
+                <div class="text-content align-center">
+
+                </div>
+            </div>
+        </section>
+
+        <section id="contact-us" class="bg-white">
+            <div class="container">
+                <div class="section-title text-color-2">Contact us</div>
                 <div class="text-content align-center">
 
                 </div>

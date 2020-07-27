@@ -1,10 +1,12 @@
 // Colors
-$themeColor: rgb(85,83,84);
-$color2: rgba(85,83,84, .6);
-$color3: #a06f3a;
-$textColor: #fff;
-$textColorHover: rgb(226, 176, 122);
 $mainBgColor: #eeeeee;
+$themeColor: cadetblue;
+$headerBg: rgba($themeColor, .5);
+$headerBgScroll: rgba($themeColor, .9);
+$color3: $themeColor;
+$textColor: #fff;
+$textColor2: #4a4a4a;
+$textColorHover: $themeColor;
 
 html, body{
   padding: 0;
@@ -17,14 +19,10 @@ body:not(.home){
   padding-top: 62px;
 }
 
-
-
 // imports
 @import 'typography';
 @import 'header';
 @import 'footer';
-
-
 
 // -------------------------------
 // Grid
@@ -59,8 +57,7 @@ section#home-overview{
       font-weight: 300;
       font-size: 25px;
       span{
-        background: $textColor;
-        color: #929190; // current bg color
+        background: $themeColor;
         padding: 0 4px;
       }
     }
@@ -95,25 +92,21 @@ section#home-overview{
       text-align: center;
       padding: 20px 15px;
       box-sizing: border-box;
-      opacity: .8;
       transition: all .3s;
       cursor: default;
     }
     .service-icon{
-      fill: #a06f3a;
-      transition: all .3s;
+      fill: $themeColor;
+      transition: all .4s;
       svg{
         width: 100px;
         height: 100px;
         transition: all .3s;
       }
     }
-    .service-item:hover{
-      opacity: 1;
-    }
     .service-item:hover .service-icon svg{
-      transform: scale(1.1);
-      fill: #000;
+      transform: scale(1.05);
+      //fill: #000;
     }
     .service-title{
       transition: all .3s;

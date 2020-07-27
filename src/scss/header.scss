@@ -2,13 +2,15 @@
 // HEADER
 // -------------------------------
 #masthead{
-  background: $color2;
+  background: $headerBg;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   width: 100%;
   z-index: 10;
+  box-shadow: 0px -3px 15px rgb(70, 70, 70);
+  transition: all .4s;
   .header-content{
     display: flex;
     justify-content: space-between;
@@ -17,11 +19,14 @@
     transition: all .3s;
   }
   a:hover{
-    color: $textColorHover;
+    //color: $textColorHover;
   }
   svg:hover{
-    fill: $textColorHover;
+    //fill: $textColorHover;
   }
+}
+#masthead.scrolling{
+  background: $headerBgScroll;
 }
 body.admin-bar #masthead{
   top: 30px;
@@ -64,9 +69,23 @@ body.admin-bar #masthead{
       font-weight: 300;
       letter-spacing: 1px;
       font-size: 18px;
+      position: relative;
     }
-    a:hover{
-      color: $textColorHover;
+    a::after{
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0px;
+      height: 1px;
+      background: #fff;
+      transition: all .5s;
+      opacity: 0;
+    }
+    a:hover::after{
+      //color: $textColorHover;
+      width: 100%;
+      opacity: 1;
     }
   }
 }
