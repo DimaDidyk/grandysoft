@@ -45,8 +45,18 @@ get_header();
         <section id="team" class="">
             <div class="container">
                 <h2 class="section-title text-color-2">Team</h2>
-
-                <div class="text-content align-center">
+                <div class="team-container">
+                <?php if( !empty( get_field('out_team', 'options') ) ): ?>
+                    <?php foreach ( get_field('out_team', 'options') as $employer ): ?>
+                        <div class="employer">
+                            <div class="img-employer">
+                                <img src="<?php echo $employer["image"]; ?>" alt="<?php echo $employer["name"]; ?>">
+                            </div>
+                            <h3 class="name"><?php echo $employer["name"]; ?></h3>
+                            <div class="description"><?php echo $employer["description"]; ?></div>
+                        </div>
+                    <?php endforeach; ?>
+                <?php endif; ?>
                 </div>
             </div>
         </section>

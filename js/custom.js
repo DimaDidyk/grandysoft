@@ -51,4 +51,14 @@ jQuery(document).ready(function ($) {
         }, 1000, function() {
         });
     }, 5000);
+
+
+    // load optimizations
+    setTimeout(function () {
+        $('iframe').each(function() {
+            if( $(this).attr('lazy-src') ){
+                $(this).attr('src', $(this).attr('lazy-src') );
+            }
+        });
+    },1200);
 });

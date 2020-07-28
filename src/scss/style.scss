@@ -39,6 +39,28 @@ body:not(.home){
 .container.padding-0{
   padding: 0;
 }
+// sections
+section{
+  padding: 30px;
+}
+section.with-bg{
+  position: relative;
+  background: rgba(0,0,0,.4);
+  color: #fff;
+  img.background{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    object-fit: cover;
+  }
+}
+section.bg-white .container{
+  background: #fff;
+  width: 1180px;
+}
 .padding-left-15{
   padding-left: 15px;
 }
@@ -62,36 +84,15 @@ body:not(.home){
 .col-30{
   width: 30%;
 }
+.col-33{
+  width: 33.333%;
+}
 .col-35 {
   width: 35%;
 }
 .col-25{
   width: 25%;
 }
-
-
-// sections
-section{
-  padding: 30px;
-}
-section.with-bg{
-  position: relative;
-  background: rgba(0,0,0,.4);
-  color: #fff;
-  img.background{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    object-fit: cover;
-  }
-}
-section.bg-white .container{
-  background: #fff;
-}
-
 
 // -------------------------------
 // Front page
@@ -132,16 +133,59 @@ section#home-overview{
   }
 }
 
+// ABOUT US
+section#about-us{
+  .text-content{
+    width: 800px;
+    max-width: 100%;
+    font-weight: 300;
+    margin: 0 auto;
+    font-size: 18px;
+    line-height: 1.8;
+    padding-bottom: 50px;
+  }
+}
+
+// section - TEAM
+.team-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-gap: 30px;
+  padding-bottom: 20px;
+  .employer{
+    .img-employer{
+      img{
+        width: 100%;
+      }
+    }
+    .name{
+      font-weight: bold;
+      letter-spacing: 2px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      line-height: 1;
+      color: $textColor2;
+    }
+    .description{
+      line-height: 1;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+
+
 // section - SERVICES
 #home-services{
   .services-wrap{
     display: flex;
     flex-wrap: wrap;
     padding-bottom: 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-gap: 30px;
     .service-item{
-      width: 33.33%;
       text-align: center;
-      padding: 20px 15px;
       box-sizing: border-box;
       transition: all .3s;
       cursor: default;
@@ -170,15 +214,29 @@ section#home-overview{
   }
 }
 
-// ABOUT US
-section#about-us{
-  .text-content{
-    width: 800px;
-    max-width: 100%;
-    font-weight: 300;
-    margin: 0 auto;
-    font-size: 18px;
-    line-height: 1.8;
-    padding-bottom: 80px;
+@media only screen and (max-width: 1320px) {
+  section .container{
+    padding-left: 0;
+    padding-right: 0;
   }
 }
+
+/* Large devices (large desktops, 1200px and up) */
+@media only screen and (max-width: 1200px) {
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media only screen and (max-width: 992px) {
+}
+
+/* Small devices (tablets, 768px and up) */
+@media only screen and (max-width: 768px) {
+  .menu-header-menu-container{
+    display: none;
+  }
+  .row .col{
+    width: 100%;
+    padding: 0;
+  }
+}
+
