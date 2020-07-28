@@ -39,6 +39,59 @@ body:not(.home){
 .container.padding-0{
   padding: 0;
 }
+.padding-left-15{
+  padding-left: 15px;
+}
+.padding-right-15{
+  padding-right: 15px;
+}
+.row{
+  display: flex;
+  flex-wrap: wrap;
+}
+.col{
+  box-sizing: border-box;
+}
+
+.col-50{
+  width: 50%;
+}
+.col-40{
+  width: 40%;
+}
+.col-30{
+  width: 30%;
+}
+.col-35 {
+  width: 35%;
+}
+.col-25{
+  width: 25%;
+}
+
+
+// sections
+section{
+  padding: 30px;
+}
+section.with-bg{
+  position: relative;
+  background: rgba(0,0,0,.4);
+  color: #fff;
+  img.background{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    object-fit: cover;
+  }
+}
+section.bg-white .container{
+  background: #fff;
+}
+
 
 // -------------------------------
 // Front page
@@ -53,7 +106,8 @@ section#home-overview{
     width: 700px;
     max-width: 100%;
     margin: 0 auto;
-    h3{
+    p{
+      margin-top: 0;
       font-weight: 300;
       font-size: 25px;
       span{
@@ -62,22 +116,19 @@ section#home-overview{
       }
     }
   }
-  img.background{
-    object-position: bottom;
-  }
-}
-
-#home-overview {
   .animate-area{
     position: relative;
     height: 50px;
   }
-  h3.animate-text {
+  p.animate-text {
     opacity: 0;
     position: absolute;
   }
-  h3.animate-text:nth-child(1) {
+  p.animate-text:nth-child(1) {
     opacity: 1;
+  }
+  img.background{
+    object-position: bottom;
   }
 }
 
@@ -121,7 +172,6 @@ section#home-overview{
 
 // ABOUT US
 section#about-us{
-  padding-bottom: 80px;
   .text-content{
     width: 800px;
     max-width: 100%;
@@ -129,5 +179,6 @@ section#about-us{
     margin: 0 auto;
     font-size: 18px;
     line-height: 1.8;
+    padding-bottom: 80px;
   }
 }

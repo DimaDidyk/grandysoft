@@ -7,6 +7,19 @@ a{
   text-decoration: none;
   color: $textColorHover;
 }
+@mixin font1{
+  font-family: 'Roboto', sans-serif;
+}
+.font1{
+  font-family: 'Roboto', sans-serif;
+}
+.font2{
+  font-family: 'Bebas Neue', cursive;
+}
+
+.text-color{
+  color: $textColor;
+}
 .text-color-2{
   color: $textColor2;
 }
@@ -14,69 +27,38 @@ header a{
   font-family: 'Bebas Neue', cursive;
 }
 
+h2{
+  font-size: 30px;
+}
+h3{
+  font-size: 24px;
+}
 h1, h2, h3, h4, h5, h6{
   margin-top: 0;
+  letter-spacing: 1px;
+  font-weight: 200;
+  font-family: 'Bebas Neue', cursive;
 }
 
-.alignleft {
-  /*rtl:ignore*/
-  float: left;
-  /*rtl:ignore*/
-  margin-right: 1.5em;
-  margin-bottom: 1.5em;
+.align-left {
+  text-align: left;
 }
-.alignright {
-  /*rtl:ignore*/
-  float: right;
-  /*rtl:ignore*/
-  margin-left: 1.5em;
-  margin-bottom: 1.5em;
+.align-right {
+  text-align: right;
 }
-.aligncenter {
-  clear: both;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 1.5em;
-}
-
-
-// sections
-section.with-bg{
-  position: relative;
-  background: rgba(0,0,0,.4);
-  color: #fff;
-  img.background{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    object-fit: cover;
-  }
-}
-
-//  ----------------- GRID
-section{
-
-}
-section.bg-white .container{
-  background: #fff;
+.align-center {
+  text-align: center;
 }
 
 // section title
 .section-title{
   text-align: center;
-  font-size: 38px;
   padding-bottom: 30px;
   padding-top: 50px;
   font-weight: 400;
-  letter-spacing: 1px;
   text-transform: uppercase;
   position: relative;
   line-height: 1.8;
-  font-family: 'Bebas Neue', cursive;
 }
 .section-title::after{
   content: '';
@@ -88,6 +70,67 @@ section.bg-white .container{
   border-radius: 1px;
 }
 
-.align-center{
-  text-align: center;
+// inputs
+textarea,
+input{
+  display: block;
+  background: transparent;
+  color: $textColor;
+  border: 2px solid $textColor;
+  margin: 0;
+  width: 100%;
+  height: 50px;
+  font-size: 18px;
+  padding: 10px 14px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+  outline: none;
+  transition: all .3s;
+}
+textarea{
+  @include font1;
+  height: 120px;
+}
+textarea::placeholder,
+input::placeholder{
+  color: $textColor;
+  opacity: .7;
+  font-size: 16px;
+  transition: all .3s;
+}
+textarea:focus::placeholder,
+input:focus::placeholder {
+  font-size: 18px;
+}
+input[type="submit"]{
+  cursor: pointer;
+  margin-top: 0;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: 'Bebas Neue', cursive;
+  letter-spacing: 2px;
+  font-size: 20px;
+  transition: all .3s;
+}
+input[type="submit"]:hover{
+  background: $textColor;
+  color: $themeColor;
+}
+// inputs placeholder animate
+.placeholder-animate{
+  position: relative;
+  .placeholder{
+    font-size: 18px;
+    position: absolute;
+    bottom: -34px;
+    left: 15px;
+    transition: all .2s;
+  }
+}
+label.placeholder-animate .placeholder.active{
+  bottom: 0px;
+  left: 0px;
+}
+.moudle input[type="text"], .moudle textarea {
+  margin-bottom: 0;
 }

@@ -20,13 +20,33 @@ get_header();
             <div class="container">
                 <div class="text-content">
                     <!-- <div class="section-title">Overview</div>-->
-                    <h3>Hello! We are young team of developers</h3>
+                    <p>Hello! We are young team of developers</p>
                     <div class="animate-area">
-                        <h3 class="animate-text">We are oriented on <span>maximal clearness</span> and <span>client's keenness</span> into the process of project development.</h3>
-                        <h3 class="animate-text">We are interested in our <span>clients' satisfaction</span> via <span>fast releases</span> of viable products without quality loss.</h3>
-                        <h3 class="animate-text">We write clean and well-commented code, which in result lead us to great scalability and <span>simplifies development</span> in the future.</h3>
+                        <p class="animate-text">We are oriented on <span>maximal clearness</span> and <span>client's keenness</span> into the process of project development.</p>
+                        <p class="animate-text">We are interested in our <span>clients' satisfaction</span> via <span>fast releases</span> of viable products without quality loss.</p>
+                        <p class="animate-text">We write clean and well-commented code, which in result lead us to great scalability and <span>simplifies development</span> in the future.</p>
                     </div>
                     <?php //echo get_post()->post_content; ?>
+                </div>
+            </div>
+        </section>
+
+        <section id="about-us" class="">
+            <div class="container">
+                <h2 class="section-title text-color-2">About us</h2>
+                <div class="text-content align-center text-color-2">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur fugit incidunt laborum, maxime mollitia nobis officiis possimus quidem quo ratione.
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur fugit incidunt laborum, maxime mollitia nobis officiis possimus quidem quo ratione.
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur fugit incidunt laborum, maxime mollitia nobis officiis possimus quidem quo ratione.
+                </div>
+            </div>
+        </section>
+
+        <section id="team" class="">
+            <div class="container">
+                <h2 class="section-title text-color-2">Team</h2>
+
+                <div class="text-content align-center">
                 </div>
             </div>
         </section>
@@ -34,7 +54,7 @@ get_header();
         <section id="home-services" class="bg-white">
             <div class="container">
                 <div class="text-content">
-                    <div class="section-title text-color-2">Our Services</div>
+                    <h2 class="section-title text-color-2">Our Services</h2>
                     <div class="services-wrap text-color-2">
                         <div class="service-item">
                             <div class="service-icon">
@@ -77,43 +97,23 @@ get_header();
             </div>
         </section>
 
-        <section id="about-us" class="">
-            <div class="container">
-                <div class="section-title text-color-2">About us</div>
-                <div class="text-content align-center text-color-2">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur fugit incidunt laborum, maxime mollitia nobis officiis possimus quidem quo ratione.
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur fugit incidunt laborum, maxime mollitia nobis officiis possimus quidem quo ratione.
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur fugit incidunt laborum, maxime mollitia nobis officiis possimus quidem quo ratione.
-                </div>
-            </div>
-        </section>
-
-        <section id="team" class="bg-white">
-            <div class="container">
-                <div class="section-title text-color-2">Team</div>
-
-                <div class="text-content align-center">
-                </div>
-            </div>
-        </section>
-
         <section id="portfolio" class="">
             <div class="container">
-                <div class="section-title text-color-2">Portfolio</div>
+                <h2 class="section-title text-color-2">Portfolio</h2>
                 <div class="text-content align-center">
 
                 </div>
             </div>
         </section>
 
-        <section id="contact-us" class="bg-white">
-            <div class="container">
-                <div class="section-title text-color-2">Contact us</div>
-                <div class="text-content align-center">
-
-                </div>
-            </div>
-        </section>
+<!--        <section id="contact-us" class="bg-white">-->
+<!--            <div class="container">-->
+<!--                <h2 class="section-title text-color-2">Contact us</h2>-->
+<!--                <div class="text-content align-center">-->
+<!---->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </section>-->
 
     </main><!-- #main -->
 <?php
