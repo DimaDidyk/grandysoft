@@ -22,7 +22,7 @@
                     <div class="col col-30 padding-left-15 padding-right-15">
                         <h3>General Contact</h3>
                         <p>Phone: <a href="tel:+380939227888">+380939227888</a></p>
-                        <p>Email: <a href="mailto:supprt@grandysoft.com">supprt@grandysoft.com</a></p>
+                        <p>Email: <a href="mailto:supportgit @grandysoft.com">support@grandysoft.com</a></p>
                         <p>54000, Soborna Street 1</p>
                         <p>Mykolaiv, Ukraine</p>
 
