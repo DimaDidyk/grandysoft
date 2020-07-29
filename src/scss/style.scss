@@ -41,7 +41,7 @@ body:not(.home){
 }
 // sections
 section{
-  padding: 30px;
+  padding: 0 30px;
 }
 section.with-bg{
   position: relative;
@@ -60,6 +60,9 @@ section.with-bg{
 section.bg-white .container{
   background: #fff;
   width: 1180px;
+}
+img{
+  max-width: 100%;
 }
 .padding-left-15{
   padding-left: 15px;
@@ -151,7 +154,7 @@ section#about-us{
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   grid-gap: 30px;
-  padding-bottom: 20px;
+  padding-bottom: 80px;
   .employer{
     .img-employer{
       img{
@@ -173,14 +176,12 @@ section#about-us{
   }
 }
 
-
-
 // section - SERVICES
 #home-services{
   .services-wrap{
     display: flex;
     flex-wrap: wrap;
-    padding-bottom: 40px;
+    padding-bottom: 80px;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     grid-gap: 30px;
@@ -214,17 +215,46 @@ section#about-us{
   }
 }
 
+// section - PORTFOLIO
+#portfolio{
+  .portfolio-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-auto-rows: 320px;
+    grid-gap: 0;
+    padding-bottom: 80px;
+    .portfolio-item{
+      position: relative;
+      img{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    .portfolio-item-1{
+      grid-row: span 1;
+      grid-column: span 2;
+      img{
+        object-position: center right;
+      }
+    }
+    .portfolio-item-2{
+      grid-column: span 1;
+    }
+    .portfolio-item-4{
+      grid-column: span 1;
+    }
+  }
+}
+
+
 @media only screen and (max-width: 1320px) {
   section .container{
     padding-left: 0;
     padding-right: 0;
   }
 }
-
-/* Large devices (large desktops, 1200px and up) */
-@media only screen and (max-width: 1200px) {
-}
-
 /* Medium devices (desktops, 992px and up) */
 @media only screen and (max-width: 992px) {
 }
@@ -239,4 +269,3 @@ section#about-us{
     padding: 0;
   }
 }
-

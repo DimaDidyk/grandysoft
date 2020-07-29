@@ -110,8 +110,26 @@ get_header();
         <section id="portfolio" class="">
             <div class="container">
                 <h2 class="section-title text-color-2">Portfolio</h2>
-                <div class="text-content align-center">
+                <div class="portfolio-grid">
+                    <div class="portfolio-item portfolio-item-1">
+                        <img src="<?php echo get_template_directory_uri() .'/src/images/image.jpg' ?>" alt="">
+                    </div>
+                    <div class="portfolio-item portfolio-item-2">
+                        <img src="<?php echo get_template_directory_uri() .'/src/images/photo_2020-07-28_16-22-16.jpg' ?>" alt="">
+                    </div>
+                    <div class="portfolio-item portfolio-item-4">
+                        <img src="<?php echo get_template_directory_uri() .'/src/images/photo_2020-07-28_16-25-02.jpg' ?>" alt="">
+                    </div>
 
+                    <!--                    <div class="portfolio-item portfolio-item-3">-->
+                    <!--                        <img src="--><?php //echo get_template_directory_uri() .'/src/images/photo_2020-07-28_16-34-52.jpg' ?><!--" alt="">-->
+                    <!--                    </div>-->
+                    <!--                    <div class="portfolio-item portfolio-item-5">-->
+                    <!--                        <img src="--><?php //echo get_template_directory_uri() .'/src/images/photo_2020-07-28_16-22-16.jpg' ?><!--" alt="">-->
+                    <!--                    </div>-->
+                    <!--                    <div class="portfolio-item portfolio-item-6">-->
+                    <!--                        <img src="--><?php //echo get_template_directory_uri() .'/src/images/photo_2020-07-28_16-22-16.jpg' ?><!--" alt="">-->
+                    <!--                    </div>-->
                 </div>
             </div>
         </section>
