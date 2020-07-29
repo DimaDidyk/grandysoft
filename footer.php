@@ -16,7 +16,7 @@
                     <div class="col col-35 padding-right-15">
                         <h3>Contact us</h3>
                         <div class="form-wrap font1">
-                            <?php echo do_shortcode('[contact-form-7 id="47" title="Contact form 1"]'); ?>
+                            <?php echo do_shortcode('[contact-form-7 title="Contact us"]'); ?>
                         </div>
                     </div>
                     <div class="col col-30 padding-left-15 padding-right-15">
