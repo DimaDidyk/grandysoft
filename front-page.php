@@ -134,15 +134,6 @@ get_header();
             </div>
         </section>
 
-<!--        <section id="contact-us" class="bg-white">-->
-<!--            <div class="container">-->
-<!--                <h2 class="section-title text-color-2">Contact us</h2>-->
-<!--                <div class="text-content align-center">-->
-<!---->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </section>-->
-
     </main><!-- #main -->
 <?php
 get_footer();

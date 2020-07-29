@@ -16,13 +16,14 @@ body{
   background: $mainBgColor;
 }
 body:not(.home){
-  padding-top: 62px;
+  //padding-top: 62px;
 }
 
 // imports
 @import 'typography';
 @import 'header';
 @import 'footer';
+@import 'blog';
 
 // -------------------------------
 // Grid
@@ -101,7 +102,7 @@ img{
 // Front page
 // -------------------------------
 // section - OVERVIEW
-section#home-overview{
+section.banner{
   min-height: 600px;
   display: flex;
   text-align: center;

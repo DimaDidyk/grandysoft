@@ -1,7 +1,3 @@
-body{
-  //padding-bottom: 600px;
-  position: relative;
-}
 // -------------------------------
 // FOOTER
 // -------------------------------
@@ -10,11 +6,11 @@ body{
   left: 0;
   right: 0;
   width: 100%;
-  background: $themeColor;
+  background-color: $themeColor;
   color: white;
   padding: 25px 0;
   a{
-    color: #fff;
+    color: $textColor;
     text-decoration: underline;
   }
   iframe{
@@ -45,15 +41,15 @@ body{
       span.wpcf7-not-valid-tip{
         position: relative;
         top: -16px;
-        color: #fff;
+        color: $textColor;
         display: none;
       }
     }
     .wpcf7 form .wpcf7-response-output{
-      background: #fff;
-      color: #4a4a4a;
+      background: $textColor;
+      color: $textColor2;
       padding: 5px 10px;
-      border-color: #fff;
+      border-color: $textColor;
       position: absolute;
       width: 100%;
       max-width: 100%;
@@ -63,6 +59,10 @@ body{
     .wpcf7-not-valid{
       position: relative;
       animation: notValid .6s linear;
+    }
+    input[type="submit"]{
+      width: 100%;
+      max-width: 100%;
     }
     @keyframes notValid {
       0%{

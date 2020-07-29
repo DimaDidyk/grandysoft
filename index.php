@@ -12,28 +12,33 @@
  * @package grandysoft
  */
 
-get_header();
-?>
+get_header(); ?>
 	<main id="primary" class="site-main">
 
-        <section id="blog-banner">
+        <section class="banner with-bg">
+            <?php if( !empty(get_the_post_thumbnail_url( get_option( 'page_for_posts' ) ))): ?>
+                <img src="<?php echo get_the_post_thumbnail_url( get_option( 'page_for_posts' ), '1200x1200' ); ?>" alt="bg" class="background">
+            <?php endif; ?>
             <div class="container">
-                <h2>blog</h2>
+                <div class="text-content">
+                    <h1 class="section-title without-line"><?php echo get_the_title(get_option( 'page_for_posts' )); ?></h1>
+                </div>
             </div>
         </section>
 
         <div class="container">
-            <?php if ( have_posts() ) :
-                /* Start the Loop */
-                while ( have_posts() ) :
-                    the_post();
-                    get_template_part( 'template-parts/content', get_post_type() );
-                endwhile;
-                the_posts_navigation();
-            else :
-                get_template_part( 'template-parts/content', 'none' );
-            endif;?>
-
+            <div class="blog-posts">
+                <?php if ( have_posts() ) :
+                    /* Start the Loop */
+                    while ( have_posts() ) :
+                        the_post();
+                        get_template_part( 'template-parts/content' );
+                    endwhile;
+                    the_posts_navigation();
+                else :
+                    get_template_part( 'template-parts/content', 'none' );
+                endif;?>
+            </div>
         </div>
 	</main><!-- #main -->
 <?php
