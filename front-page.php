@@ -111,25 +111,28 @@ get_header();
             <div class="container">
                 <h2 class="section-title text-color-2">Portfolio</h2>
                 <div class="portfolio-grid">
-                    <div class="portfolio-item portfolio-item-1">
-                        <img src="<?php echo get_template_directory_uri() .'/src/images/image.jpg' ?>" alt="">
-                    </div>
-                    <div class="portfolio-item portfolio-item-2">
-                        <img src="<?php echo get_template_directory_uri() .'/src/images/photo_2020-07-28_16-22-16.jpg' ?>" alt="">
-                    </div>
-                    <div class="portfolio-item portfolio-item-4">
-                        <img src="<?php echo get_template_directory_uri() .'/src/images/photo_2020-07-28_16-25-02.jpg' ?>" alt="">
-                    </div>
+                    <?php
+                        $args = array(
+                            'post_type' => 'work',
+                            'post_status' => 'publish',
+                            'posts_per_page' => -1,
+                            'order' => 'ASC',
+                        );
+                        $loop = new WP_Query( $args );
+                     ?>
 
-                    <!--                    <div class="portfolio-item portfolio-item-3">-->
-                    <!--                        <img src="--><?php //echo get_template_directory_uri() .'/src/images/photo_2020-07-28_16-34-52.jpg' ?><!--" alt="">-->
-                    <!--                    </div>-->
-                    <!--                    <div class="portfolio-item portfolio-item-5">-->
-                    <!--                        <img src="--><?php //echo get_template_directory_uri() .'/src/images/photo_2020-07-28_16-22-16.jpg' ?><!--" alt="">-->
-                    <!--                    </div>-->
-                    <!--                    <div class="portfolio-item portfolio-item-6">-->
-                    <!--                        <img src="--><?php //echo get_template_directory_uri() .'/src/images/photo_2020-07-28_16-22-16.jpg' ?><!--" alt="">-->
-                    <!--                    </div>-->
+                    <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
+                        <div class="portfolio-item portfolio-item-1">
+                            <a href="<?php the_permalink(); ?>" class="portfolio-img-wrap">
+                                <div class="project-wrap">
+                                    <span class="project-title"><?php the_title(); ?></span>
+                                </div>
+                                <img src="<?php echo get_the_post_thumbnail_url( get_the_ID(), '1200x1200' ); ?>" alt="project image">
+                            </a>
+                        </div>
+                    <?php endwhile; ?>
+                    <?php wp_reset_postdata(); ?>
+
                 </div>
             </div>
         </section>
