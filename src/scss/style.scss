@@ -169,6 +169,14 @@ section#about-us{
       margin-bottom: 10px;
       line-height: 1;
       color: $textColor2;
+      a{
+        float: right;
+        svg{
+          width: 28px;
+          height: 24px;
+          color: $textColor2;
+        }
+      }
     }
     .description{
       line-height: 1;

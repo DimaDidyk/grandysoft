@@ -52,7 +52,10 @@ get_header();
                             <div class="img-employer">
                                 <img src="<?php echo $employer["image"]; ?>" alt="<?php echo $employer["name"]; ?>">
                             </div>
-                            <h3 class="name"><?php echo $employer["name"]; ?></h3>
+                            <h3 class="name">
+                                <?php echo $employer["name"]; ?>
+                                <a href="<?php echo $employer["linkedin"]; ?>"><?php require get_template_directory(). '/src/icons/linkedin.svg.php'; ?></a>
+                            </h3>
                             <div class="description"><?php echo $employer["description"]; ?></div>
                         </div>
                     <?php endforeach; ?>

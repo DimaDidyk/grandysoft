@@ -8,7 +8,6 @@
  */
 
 get_header(); ?>
-
     <main id="primary" class="site-main singe-work">
 
         <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
