@@ -21,7 +21,11 @@ get_header(); ?>
             <?php endif; ?>
             <div class="container">
                 <div class="text-content">
-                    <h1 class="section-title without-line"><?php echo get_the_title(get_option( 'page_for_posts' )); ?></h1>
+                    <h1 class="section-title without-line">
+                        <?php echo get_the_title(get_option( 'page_for_posts' )); ?>
+
+                        <?php if( !empty(single_term_title( $prefix = '', $display = false)) ){ single_term_title( $prefix = ' - ', $display = true ); } ?>
+                    </h1>
                 </div>
             </div>
         </section>

@@ -9,6 +9,19 @@
 
 }
 
+.meta-content{
+  display: block;
+  margin-bottom: 20px;
+  .author{
+    margin-bottom: 10px;
+  }
+  .post-categories{
+    a{
+      margin-right: 10px;
+    }
+  }
+}
+
 // -------------------------------
 // BLOG POST
 // -------------------------------
