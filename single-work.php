@@ -9,29 +9,43 @@
 
 get_header(); ?>
 
-    <main id="primary" class="site-main">
+    <main id="primary" class="site-main singe-work">
 
-        <section class="banner with-bg">
-            <?php if( !empty(get_the_post_thumbnail_url(get_the_ID()))): ?>
-                <img src="<?php echo get_the_post_thumbnail_url( get_the_ID(), '1200x1200' ); ?>" alt="bg" class="background">
-            <?php endif; ?>
-            <div class="container">
-                <div class="text-content">
-                    <h1 class="section-title without-line"><?php the_title(); ?> Works</h1>
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+        <?php if( !empty(get_field('gallery')) ): ?>
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <?php foreach (get_field('gallery') as $gallery_item): ?>
+                        <div class="swiper-slide">
+                            <div class="slide-content">
+                                <img src="<?php echo $gallery_item?>" alt="$gallery_item">
+                            </div>
+                        </div>
+                    <?php endforeach; ?>
                 </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination swiper-pagination-white"></div>
+            </div>
+        <?php endif; ?>
+        <!-- Initialize Swiper -->
+        <script>
+            var swiper = new Swiper('.swiper-container', {
+                pagination: {
+                    el: '.swiper-pagination',
+                    dynamicBullets: true,
+                },
+            });
+        </script>
+
+        <section class="container">
+            <div class="description entry-content">
+                <?php if( !empty(get_field('project_link')) ): ?>
+                    <a href="<?php the_field('project_link'); ?>" class="project-url">Project URL</a>
+                <?php endif; ?>
+                <?php the_content(); ?>
             </div>
         </section>
-
-        <?php  ?>
-        <div class="container">
-            <?php while ( have_posts() ) :
-                the_post();
-                get_template_part( 'template-parts/content', get_post_type() );
-                //			if ( comments_open() || get_comments_number() ) :
-                //				comments_template();
-                //			endif;
-            endwhile; // End of the loop. ?>
-        </div>
     </main><!-- #main -->
 
 <?php get_footer();

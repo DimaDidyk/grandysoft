@@ -302,3 +302,23 @@ section#about-us{
     padding: 0;
   }
 }
+
+
+// Work - single page (portfolio)
+.singe-work{
+  .slide-content{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    img{
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .project-url{
+    font-size: 20px;
+  }
+}
