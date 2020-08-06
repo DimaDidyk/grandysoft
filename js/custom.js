@@ -61,4 +61,26 @@ jQuery(document).ready(function ($) {
             }
         });
     },1200);
+
+    if( $('body').hasClass('single-work') ){
+        async function playVideo() {
+            try {
+                await videoElem.play();
+            } catch(err) {
+                console.log(err);
+            }
+        }
+        let videoElem = document.getElementById("portfolio-video");
+        $(window).on('wheel', function(e) {
+            let deltaY = e.originalEvent.deltaY;
+            if( deltaY >0 ){
+                $('.portfolio-banner').addClass('show-video');
+                playVideo();
+            }else{
+                $('.portfolio-banner').removeClass('show-video');
+                videoElem.pause();
+            }
+        });
+    }
+
 });
