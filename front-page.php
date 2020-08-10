@@ -54,7 +54,9 @@ get_header();
                             </div>
                             <h3 class="name">
                                 <?php echo $employer["name"]; ?>
-                                <a href="<?php echo $employer["linkedin"]; ?>"><?php require get_template_directory(). '/src/icons/linkedin.svg.php'; ?></a>
+                                <?php if( !empty($employer["linkedin"]) ): ?>
+                                    <a href="<?php echo $employer["linkedin"]; ?>"><?php require get_template_directory(). '/src/icons/linkedin.svg.php'; ?></a>
+                                <?php endif; ?>
                             </h3>
                             <div class="description"><?php echo $employer["description"]; ?></div>
                         </div>

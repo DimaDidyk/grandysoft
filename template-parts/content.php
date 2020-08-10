@@ -25,7 +25,7 @@
             <div class="post-categories">
                 Categories:
                 <?php foreach (wp_get_post_categories(get_the_ID(), array('fields' => 'all')) as $category): ?>
-                <a href="<?php echo get_term_link( $category ); ?>" lass="category"><?php echo $category->name; ?></a>
+                    <a href="<?php echo get_term_link( $category ); ?>" lass="category"><?php echo $category->name; ?></a>
                 <?php endforeach; ?>
             </div>
         </div>

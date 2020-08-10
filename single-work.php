@@ -51,9 +51,9 @@ get_header(); ?>
             </div>
         </div>
 
-        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-        <?php if( empty(get_field('gallery')) ): ?>
+<!--        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">-->
+<!--        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>-->
+        <?php if( !empty(get_field('gallery')) ): ?>
             <div class="swiper-container">
                 <div class="swiper-wrapper">
                     <?php foreach (get_field('gallery') as $gallery_item): ?>
@@ -69,14 +69,14 @@ get_header(); ?>
             </div>
         <?php endif; ?>
         <!-- Initialize Swiper -->
-        <script>
-            var swiper = new Swiper('.swiper-container', {
-                pagination: {
-                    el: '.swiper-pagination',
-                    dynamicBullets: true,
-                },
-            });
-        </script>
+<!--        <script>-->
+<!--            var swiper = new Swiper('.swiper-container', {-->
+<!--                pagination: {-->
+<!--                    el: '.swiper-pagination',-->
+<!--                    dynamicBullets: true,-->
+<!--                },-->
+<!--            });-->
+<!--        </script>-->
 
     </main><!-- #main -->
 
