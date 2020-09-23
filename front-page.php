@@ -20,7 +20,7 @@ get_header();
             <div class="container">
                 <div class="text-content">
                     <!-- <div class="section-title">Overview</div>-->
-                    <p>Hello! We are young team of developers</p>
+                    <p>Hello! We are team of developers</p>
                     <div class="animate-area">
                         <p class="animate-text">We are oriented on <span>maximal clearness</span> and <span>client's keenness</span> into the process of project development.</p>
                         <p class="animate-text">We are interested in our <span>clients' satisfaction</span> via <span>fast releases</span> of viable products without quality loss.</p>
