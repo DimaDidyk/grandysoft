@@ -5,7 +5,7 @@
   "main": "index.js",
   "dependencies": {
     "nodemon": "^2.0.4",
-    "node-sass": "^4.14.0"
+    "node-sass": "^7.0.0"
   },
   "scripts": {
     "compile-styles": "node-sass --output-style compressed --source-map false --source-map-contents false src/scss/style.scss dist/css/style.min.css",
